@@ -1,0 +1,31 @@
+
+<div class="all">
+    <div class="main">
+       <div class="center">
+         
+       <div class="inp1">
+        <label>Email</label>
+        <input type="text" placeholder="email" name="email" [(ngModel)]="lgnuser.email"/>
+       </div>
+    <div class="inp2">
+        <label>password</label>
+    <input type="password" placeholder="password" name="password"  [(ngModel)]="lgnuser.password"/>
+    
+    </div>
+    <p class="fpas">Forgot password</p>
+    <div class="btn">
+        <button (click)="OnSubmit()" type="submit">Login</button>
+
+<div class="showEmpty" *ngIf="showEmpty">
+empty details
+</div>
+
+<ng-container *ngIf="!showEmpty">
+<div *ngIf="showErr" style="color: red;">
+        Invalid Details
+</div>
+</ng-container>
+    </div>
+       </div>
+    </div>
+    </div>
